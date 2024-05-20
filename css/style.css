@@ -9465,7 +9465,7 @@ a.text-dark:hover, a.text-dark:focus {
 /********** Custom CSS ************/
 h1,
 h2 {
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 h3,
@@ -9563,7 +9563,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
