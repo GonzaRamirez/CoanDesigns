@@ -9572,7 +9572,7 @@ h6 {
   position: absolute;
   width: 100%;
   height: 40px;
-  top: 50%;
+  top: 30%;
   left: 0;
   margin-top: -20px;
   padding: 0 45px;
@@ -9602,7 +9602,7 @@ h6 {
 .team-carousel:hover .owl-nav .owl-next,
 .service-carousel:hover .owl-nav .owl-prev,
 .service-carousel:hover .owl-nav .owl-next {
-  opacity: 90%;
+  opacity: 70%;
 }
 
 .portfolio-item .portfolio-img {
