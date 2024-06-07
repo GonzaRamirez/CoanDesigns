@@ -6176,7 +6176,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #F3F6FF !important;
+  background-color: #fff !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -9921,7 +9921,7 @@ h6 {
 
 
 .footer {
-  background-color: #333;
+  background-color: #5C5E5F;
   color: #fff;
   position: relative;
   text-align: center;
