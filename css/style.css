@@ -9926,6 +9926,7 @@ h6 {
   position: relative;
   text-align: center;
   margin-top: 60px;
+  bottom: 0;
 }
 
 /* Logo styles */
@@ -10040,3 +10041,34 @@ h6 {
     padding-top: 30px;
   }
 }
+
+
+.container-project{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Ajusta la altura del contenedor según tus necesidades */
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.content-project {
+  text-align: center;
+  width: 100%;
+  max-width: 700px; /* Ajusta el tamaño máximo según necesites */
+}
+
+.responsive-img-project {
+  width: 100%;
+  display: block;
+  margin-top: 0px;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
