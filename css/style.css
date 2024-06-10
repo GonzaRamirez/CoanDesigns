@@ -664,6 +664,7 @@ pre code {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  height: auto;
 }
 
 .col {
