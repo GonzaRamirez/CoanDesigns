@@ -10071,37 +10071,61 @@ h6 {
   color: #333;
 }
 
-@media (max-width: 1200px){
-  .img-oceandream{
-    height: 294px;
-    width: 100%;
+
+.grid-container-project {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  background-color: #E2DED2;
+}
+
+.grid-item-project {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+}
+
+.grid-item-project img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.grid-item-project:hover img {
+  opacity: 0.8; /* Cambia la opacidad de la imagen al hacer hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item-project img:hover {
+  transform: scale(1.1);
+}
+
+.grid-item-project:hover .overlay {
+  display: flex; /* Muestra el overlay solo cuando se hace hover sobre la imagen */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+@media (max-width: 400px){
+  .grid-item-project{
+    height: auto;
   }
 }
 
 @media (max-width: 992px){
-  .img-oceandream{
-    height: 441.328px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px){
-  .img-oceandream{
-    height: 656px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 390px){
-  .img-oceandream{
-    height: 456px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 1920px){
-  .img-oceandream{
-    height: 374px;
-    width: 100%;
+  .grid-item-project{
+    height: auto;
   }
 }
