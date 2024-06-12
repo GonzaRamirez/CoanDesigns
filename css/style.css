@@ -10071,4 +10071,37 @@ h6 {
   color: #333;
 }
 
+@media (max-width: 1200px){
+  .img-oceandream{
+    height: 294px;
+    width: 100%;
+  }
+}
 
+@media (max-width: 992px){
+  .img-oceandream{
+    height: 441.328px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  .img-oceandream{
+    height: 656px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px){
+  .img-oceandream{
+    height: 456px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1920px){
+  .img-oceandream{
+    height: 374px;
+    width: 100%;
+  }
+}
