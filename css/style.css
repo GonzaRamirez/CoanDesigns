@@ -9893,7 +9893,7 @@ h6 {
 .navbar {
   background-color: #333; /* Fondo oscuro */
   padding: 1rem;
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 0px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
@@ -10130,3 +10130,80 @@ h6 {
   }
 }
 
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Puedes ajustar esto según tus necesidades */
+}
+
+.gallery-img {
+  width: calc(33.333% - 10px); /* Tres imágenes por fila con espacio de 10px */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .gallery-img {
+      width: calc(50% - 10px); /* Dos imágenes por fila en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-img {
+      width: 100%; /* Una imagen por fila en pantallas muy pequeñas */
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 50%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden;
+}

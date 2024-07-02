@@ -119,3 +119,42 @@
     
 })(jQuery);
 
+
+
+// Get elements
+var modal = document.getElementById("modal");
+var modalImg = document.getElementById("modal-img");
+var galleryImages = document.querySelectorAll(".gallery-img");
+var navBar = document.querySelector("nav");
+
+// Event listener for gallery images
+galleryImages.forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+        document.body.classList.add("modal-open"); // Evita el desplazamiento del cuerpo
+        navBar.style.visibility = "hidden"; // Oculta la barra de navegación sin quitar su espacio
+    }
+});
+
+// Close modal function
+function closeModal() {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open"); // Permite el desplazamiento del cuerpo nuevamente
+    navBar.style.visibility = "visible"; // Muestra la barra de navegación al cerrar el modal
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Close modal when clicking on close button
+span.onclick = function() {
+    closeModal();
+}
+
+// Close modal when clicking outside of the modal content
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
