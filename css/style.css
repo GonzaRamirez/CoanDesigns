@@ -9828,10 +9828,10 @@ h6 {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
       grid-template-areas: 
-      "image1"
       "text1"
       "image2"
-      "text2";
+      "text2"
+      "image1";
 
   }
   .services-container{
