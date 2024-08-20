@@ -9477,7 +9477,7 @@ a.text-dark:hover, a.text-dark:focus {
 /********** Custom CSS ************/
 h1,
 h2 {
-  font-weight: 100 !important;
+  font-weight: 100;
 }
 
 h3,
@@ -9856,15 +9856,17 @@ h6 {
   max-width: 100%;
 }
 
-.frase h2{
+.frase-letra{
   letter-spacing: 3px;
   line-height: 1.8;
+  font-weight: lighter;
 }
 
 @media (max-width: 900px){
   .frase h2{
     letter-spacing: 1px;
     line-height: 1;
+    font-weight: 100;
   }
 }
 
