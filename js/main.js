@@ -120,18 +120,19 @@
 })(jQuery);
 
 
-
-// Get elements
+ // Modal slider gallery
 var modal = document.getElementById("modal");
 var modalImg = document.getElementById("modal-img");
 var galleryImages = document.querySelectorAll(".gallery-img");
 var navBar = document.querySelector("nav");
+var currentIndex = 0;
 
 // Event listener for gallery images
-galleryImages.forEach(img => {
+galleryImages.forEach((img, index) => {
     img.onclick = function() {
         modal.style.display = "flex";
         modalImg.src = this.src;
+        currentIndex = index;
         document.body.classList.add("modal-open"); // Evita el desplazamiento del cuerpo
         navBar.style.visibility = "hidden"; // Oculta la barra de navegación sin quitar su espacio
     }
@@ -146,8 +147,6 @@ function closeModal() {
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// Close modal when clicking on close button
 span.onclick = function() {
     closeModal();
 }
@@ -157,4 +156,15 @@ window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
+}
+
+// Navigation for slider
+document.querySelector(".prev").onclick = function() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : galleryImages.length - 1;
+    modalImg.src = galleryImages[currentIndex].src;
+}
+
+document.querySelector(".next").onclick = function() {
+    currentIndex = (currentIndex < galleryImages.length - 1) ? currentIndex + 1 : 0;
+    modalImg.src = galleryImages[currentIndex].src;
 }
