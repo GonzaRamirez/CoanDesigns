@@ -9864,9 +9864,9 @@ h6 {
 
 @media (max-width: 900px){
   .frase h2{
-    letter-spacing: 2px;
-    line-height: 1.5;
-    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    font-weight: lighter;
   }
 }
 
